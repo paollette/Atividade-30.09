@@ -5,7 +5,7 @@
         $pass = '123456';
         $port = 3307;//Porta MySQL correta
         //Inclui o arquivo da classe Database que criamos para conectar dentro da pasta php
-        require_once 'php/db.php'; 
+        require_once 'php/connection.php'; 
         //Cria uma instância de classe Database
         $database = new Database($host,$db,$user,$pass,$port);
         //Chama o método connect para estabelecer a conexão
@@ -20,7 +20,7 @@
 if ($pdo) {
     try {
         // Prepara uma consulta SQL para selecionar as colunas 'id' e 'nome' da tabela 'usuario'
-        $stmt = $pdo->prepare("SELECT id, nome FROM usuario");
+        $stmt = $pdo->prepare("INSERT INTO escola_sql.alunos(email, senha) values('$email', '$senha');");
         
         // Executa a consulta preparada
         $stmt->execute();
@@ -33,10 +33,10 @@ if ($pdo) {
             // Itera sobre cada linha de resultado
             foreach ($resultados as $row) {
                 // Exibe o valor da coluna 'id' do registro
-                echo "ID: " . $row['id'] . "<br>";
+                echo "EMail: " . $row['email'] . "<br>";
                 
                 // Exibe o valor da coluna 'nome' do registro
-                echo "Nome: " . $row['nome'] . "<br>";
+                echo "Senha: " . $row['senha'] . "<br>";
             }
         } else {
             // Caso não haja resultados, exibe uma mensagem indicando que nenhum registro foi encontrado
