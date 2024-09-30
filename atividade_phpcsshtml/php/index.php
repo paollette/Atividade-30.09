@@ -20,13 +20,19 @@
     <form action="cadastro.php" method="post">
 
     <div id="formulario">
-        <label for="nome">Email:</label><br>
-        <input type="email" id="email" name="email" placeholder="e-mail" required><br><br>
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" placeholder="Insira o nome" required><br><br>
 
-        <label for="password">Senha:</label><br>
-        <input type="password" id="senha" name="senha" placeholder="senha" required><br><br>
+        <label for="idade">Idade:</label><br>
+        <input type="int" id="idade" name="idade" placeholder="Idade" required><br><br>
+
+        <label for="">Email:</label><br>
+        <input type="e-mail" id="email" name="email" placeholder="E-mail" required><br><br>
+
+        <label for="curso">Curso:</label><br>
+        <input type="text" id="curso" name="curso" placeholder="Curso" required><br><br>
     </div>
-
+    
     <div id="botoes">
         <input type="submit" value="Cadastrar">
         <input type="submit" value="Deletar">

@@ -4,27 +4,25 @@ nav{
     margin-left: 380px;
     margin-right: 450px;
     margin-top: 50px;
+    margin-bottom: -15px;
     border-radius: 15px;
+    font-family:'Arial','sans serif'; /* carregar a fonte no google fonte */
 }
 
 #titulo h2{
     font-size: 24px;
-    margin-left: 25px;
-    font-family:'Roboto Slab', serif; /* carregar a fonte no google fonte */
+    margin-left: 39px;
 }
 
 #formulario{
     margin-left: 83px;
     margin-top: 35px;
+    font-size: 13px;
 }
 
 nav #botoes{
     margin-left: 83px;
     margin-top: 3px;
-}
-
-nav #tabela{
-
 }
 
 #botoes input{
