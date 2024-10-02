@@ -1,32 +1,44 @@
 nav{
     background-color: rgb(255, 217, 0);
-    padding: 20px;
     margin-left: 380px;
     margin-right: 450px;
     margin-top: 50px;
-    margin-bottom: -15px;
+    margin-bottom: -10px;
     border-radius: 15px;
+    border-width: 2px; 
+    border-style: solid;
+    border-color:  black;
     font-family:'Arial','sans serif'; /* carregar a fonte no google fonte */
 }
 
 #titulo h2{
-    font-size: 24px;
-    margin-left: 39px;
+    font-size: 22px;
+    margin-left: 40px;
+    margin-top: 30px;
 }
 
 #formulario{
-    margin-left: 83px;
-    margin-top: 35px;
+    margin-left: 110px;
+    margin-top: 30px;
     font-size: 13px;
 }
 
 nav #botoes{
-    margin-left: 83px;
+    margin-left: 155px;
     margin-top: 3px;
 }
 
 #botoes input{
     background-color: black;
     color: white
+}
+
+.coisas .imagem{
+    height: 1px;
+    width: 100px;
+    margin-top: -40px;
+    margin-left: -750px;
+    display: flex;
+
 }
 

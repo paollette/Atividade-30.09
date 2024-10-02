@@ -10,17 +10,14 @@
     $database -> connect();
     $pdo = $database->getConnection();
 
-    /*
-    Recuperação de dados do form
-    */
+    /* Recuperação de dados do form */
+    
     $nome = $_GET["nome"];
     $idade = $_GET["idade"];
     $email = $_GET["email"];
     $curso = $_GET["curso"];
 
-    /*
-    Insere os dados no banco
-    */
+    /* Inserir os dados no banco */
 
     $stmt = $pdo->prepare("INSERT INTO escola_sql.alunos(email, idade, senha, curso) values('$nome', '$idade', '$email', '$curso');");
     $stmt->execute();

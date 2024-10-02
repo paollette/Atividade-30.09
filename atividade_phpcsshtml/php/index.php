@@ -18,6 +18,7 @@
 </div>
 
     <form action="cadastro.php" method="post">
+    
 
     <div id="formulario">
         <label for="nome">Nome:</label><br>
@@ -26,7 +27,7 @@
         <label for="idade">Idade:</label><br>
         <input type="int" id="idade" name="idade" placeholder="Idade" required><br><br>
 
-        <label for="">Email:</label><br>
+        <label for="email">Email:</label><br>
         <input type="e-mail" id="email" name="email" placeholder="E-mail" required><br><br>
 
         <label for="curso">Curso:</label><br>
@@ -35,18 +36,60 @@
     
     <div id="botoes">
         <input type="submit" value="Cadastrar">
-        <input type="submit" value="Deletar">
     </div>
+
+<section class="coisas">
+        <div class="imagem">
+            <div class="icon"><img src="../imgs/garibaldo.jpg"></div>
+        </div>
+</section>
+
 
     </form>
+</nav>
 
-    <div id="tabela">
-
-    </div>
-<nav>
+<section class="coisas">
+        <div class="imagem">
+            <div class="icon"><img src="../imgs/garibaldo.jpg"></div>
+        </div>
+</section>
 
 <section class="tabela">
-    
+
+<div class="tabela-container">
+            <h2>Alunos Cadastrados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Idade</th>
+                        <th>Curso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    // Consulta SQL para buscar os alunos cadastrados
+                    $stmt = $pdo->prepare("SELECT nome, email, idade, curso FROM alunos");
+                    $stmt->execute();
+
+                    // Verifica se há registros retornados
+                    if ($stmt->rowCount() > 0) {
+                        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                            echo "<tr>
+                                    <td>" . htmlspecialchars($row['nome']) . "</td>
+                                    <td>" . htmlspecialchars($row['email']) . "</td>
+                                    <td>" . htmlspecialchars($row['idade']) . "</td>
+                                    <td>" . htmlspecialchars($row['curso']) . "</td>
+                                  </tr>";
+                        }
+                    } else {
+                        echo "<tr><td colspan='4'>Nenhum aluno cadastrado</td></tr>";
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
 
 </section>
 
