@@ -43,12 +43,11 @@
 
 <div class="imagem">
         <a href="https://www.youtube.com/watch?v=ELv6IPkML2s"></a>
-        <img src="../imgs/garibaldo.jpg"></div>
-
+        <img src="../imgs/garibaldo.jpg">
 </div>
 
-<section class="tabela">
 
+<section class="tabela">
 <div class="tabela-container">
             <h2>Alunos Cadastrados</h2>
             <table>
@@ -83,8 +82,12 @@
                 
                 </tbody>
             </table>
+            
+     <div id="botoes">
+        <input type="submit" value="Deletar">
+    </div>
 </div>
-        
+    
 
 </section>
 
