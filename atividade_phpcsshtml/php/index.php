@@ -10,7 +10,7 @@
 </head>
 
 <body>
-
+    
 <nav>
 
 <div id="titulo">
@@ -38,21 +38,14 @@
         <input type="submit" value="Cadastrar">
     </div>
 
-<section class="coisas">
-        <div class="imagem">
-            <div class="icon"><img src="../imgs/garibaldo.jpg"></div>
-        </div>
-</section>
-
-
     </form>
 </nav>
 
-<section class="coisas">
-        <div class="imagem">
-            <div class="icon"><img src="../imgs/garibaldo.jpg"></div>
-        </div>
-</section>
+<div class="imagem">
+        <a href="https://www.youtube.com/watch?v=ELv6IPkML2s"></a>
+        <img src="../imgs/garibaldo.jpg"></div>
+
+</div>
 
 <section class="tabela">
 
@@ -70,7 +63,7 @@
                 <tbody>
                     <?php
                     // Consulta SQL para buscar os alunos cadastrados
-                    $stmt = $pdo->prepare("SELECT nome, email, idade, curso FROM alunos");
+                    $stmt = $pdo->prepare("SELECT nome, email, idade, curso FROM escola_sql.alunos");
                     $stmt->execute();
 
                     // Verifica se há registros retornados
@@ -87,9 +80,11 @@
                         echo "<tr><td colspan='4'>Nenhum aluno cadastrado</td></tr>";
                     }
                     ?>
+                
                 </tbody>
             </table>
-        </div>
+</div>
+        
 
 </section>
 
